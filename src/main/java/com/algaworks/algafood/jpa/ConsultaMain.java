@@ -18,11 +18,17 @@ public class ConsultaMain {
 				.run(args);
 		CadastroCozinha cc = ap.getBean(CadastroCozinha.class);
 		
-		List<Cozinha> cozinhas = cc.listar();
+		Cozinha c1 = new Cozinha();
+		c1.setNome("Brasilerira");
 		
-		for (Cozinha cozinha : cozinhas) {
-			System.out.println(cozinha.getNome());
-		}
+		Cozinha c2 = new Cozinha();
+		c2.setNome("Japonesa");
+		
+		Cozinha c1a = cc.adicionar(c1);
+		Cozinha c2a = cc.adicionar(c2);
+		
+		System.out.printf("%d - %s\n", c1a.getId(),  c1a.getNome());
+		System.out.printf("%d - %s\n", c2a.getId(),  c2a.getNome());
 		
 	}
 	
