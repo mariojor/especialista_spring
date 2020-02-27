@@ -5,12 +5,13 @@ import java.util.List;
 import com.algaworks.algafood.domain.model.Cozinha;
 
 public interface CozinhaRepository {
-	
-	public List<Cozinha> listar();
 
-	public Cozinha buscar(Long id);
+	List<Cozinha> listar();
 
-	public Cozinha salvar(Cozinha cozinha);
+	Cozinha buscar(Long id);
 
-	public void remover(Cozinha cozinha);
+	Cozinha salvar(Cozinha cozinha);
+
+	void remover(Cozinha cozinha);
+
 }
